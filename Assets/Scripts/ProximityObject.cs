@@ -6,11 +6,15 @@ public class ProximityObject : MonoBehaviour {
     public bool armed;
     public float totalCountdown;
     public float countdown;
-
+    public bool staticScare;
+    public GameObject scareObj;
     private Animator anim;
 	// Use this for initialization
 	void Start () {
-        anim = GetComponent<Animator>();
+        if (staticScare == false)
+        {
+            anim = GetComponent<Animator>();
+        }
 	}
 	
 	// Update is called once per frame
@@ -26,8 +30,16 @@ public class ProximityObject : MonoBehaviour {
 
     public void ActivateScare()
     {
-        armed = false;
-        anim.Play("Pop");
+        if (staticScare == false)
+        {
+            armed = false;
+            anim.Play("Pop");
+        }
+        else
+        {
+            scareObj.GetComponent<ScareObject>().lifetime = 6;
+            scareObj.active = true;
+        }
   
     }
     public void Armed()
