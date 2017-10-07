@@ -5,9 +5,9 @@ using UnityEngine;
 public class Door : MonoBehaviour {
     public GameObject doorHinge;
     public bool open;
-    
-	// Use this for initialization
-	void Start () {
+    public GameObject scareObj;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -25,5 +25,7 @@ public class Door : MonoBehaviour {
         }
         else { open = true; hingeSpring.targetPosition = 70; }
         hinge.spring = hingeSpring;
+        scareObj.GetComponent<ScareObject>().lifetime = 6;
+        scareObj.active = true;
     }
 }

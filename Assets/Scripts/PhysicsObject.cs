@@ -5,6 +5,7 @@ using UnityEngine;
 public class PhysicsObject : MonoBehaviour {
     private Rigidbody rb;
     public int torqueForce;
+    public GameObject scareObj;
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
@@ -18,6 +19,8 @@ public class PhysicsObject : MonoBehaviour {
     public void Interact()
     {
         rb.AddTorque(transform.up * torqueForce * Time.deltaTime);
+        scareObj.GetComponent<ScareObject>().lifetime = 6;
+        scareObj.active = true;
     }
 
 }
