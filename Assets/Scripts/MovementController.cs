@@ -20,12 +20,7 @@ public class MovementController : MonoBehaviour {
 		micLoudness = LevelMax (); 
 		Debug.Log (micLoudness); 
 		if (micLoudness > 0.001) {
-<<<<<<< HEAD
-			Debug.Log (micLoudness); 
 			transform.Translate(cameraRig.transform.forward * Time.deltaTime);
-=======
-			rb.AddForce (cameraRig.transform.forward * movementSpeed); 
->>>>>>> parent of 2266c00... More movement changes
 		}
 	}
 		
