@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public GameObject player;
+    public GameObject forwardObject;
     public float XSensitivity = 2f;
     public float YSensitivity = 2f;
     public bool clampVerticalRotation = true;
@@ -29,7 +30,7 @@ public class Player : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0)) { Interact(); }
         if (Input.GetKey(KeyCode.Space) )
-        { player.transform.Translate(transform.forward * 2 * Time.deltaTime); }
+        { player.transform.position = Vector3.MoveTowards(player.transform.position, forwardObject.transform.position, 4 * Time.deltaTime); }
 
             if (Input.GetKey(KeyCode.Tab) || lockCursor == false)
         {
