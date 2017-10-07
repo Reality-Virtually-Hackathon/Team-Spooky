@@ -17,11 +17,18 @@ public class MovementController : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
+<<<<<<< HEAD
 		micLoudness = LevelMax ();
         if (micLoudness > 0.001) {
             //	rb.AddForce (cameraRig.transform.forward * movementSpeed); 
             transform.position = Vector3.MoveTowards(transform.position, cameraRig.transform.position, movementSpeed * Time.deltaTime);
         }
+=======
+		micLoudness = LevelMax (); 
+		if (micLoudness > 0.001) {
+			rb.AddForce (cameraRig.transform.forward * movementSpeed); 
+		}
+>>>>>>> 68de252749fe4fad611f5a1f4555b40f488ccc12
 	}
 		
 	float LevelMax() {
