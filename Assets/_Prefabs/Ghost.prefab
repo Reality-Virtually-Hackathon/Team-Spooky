@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 4699594176922296}
   - component: {fileID: 114395384987252216}
   - component: {fileID: 54373117709605456}
+  - component: {fileID: 114781323309247486}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -212,7 +213,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1359951204412100}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.9085, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4350335811059018}
@@ -312,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1487331097602334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.087, y: 2, z: 3.05}
+  m_LocalPosition: {x: 7.087, y: 2, z: 1.577}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4071066542518448}
@@ -678,3 +679,14 @@ MonoBehaviour:
   useRotationTracking: 1
   useIPDInPositionTracking: 1
   resetTrackerOnLoad: 0
+--- !u!114 &114781323309247486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487331097602334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75ef0f905d6c2cb409faa0bb921a880a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
