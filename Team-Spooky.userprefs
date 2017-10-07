@@ -2,7 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MovementController.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Scripts\MovementController.cs" Line="22" Column="54" />
+=======
+      <File FileName="Assets\Scripts\MovementController.cs" Line="15" Column="8" />
+>>>>>>> parent of 2266c00... More movement changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
