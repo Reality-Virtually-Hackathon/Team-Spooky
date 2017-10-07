@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Kid : MonoBehaviour {
+    public GameObject kidtracker;
     public GameObject eyes;
     public int scareMeter;
     public bool isScared;
@@ -16,8 +17,10 @@ public class Kid : MonoBehaviour {
     public GameObject exit;
     public GameObject scaredIndicator;
     private Rigidbody rb;
+    private UnityEngine.AI.NavMeshAgent agent;
     void Start()
     {
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
         foreach (Transform child in patrolPointsParent.transform)
         {
@@ -29,7 +32,8 @@ public class Kid : MonoBehaviour {
 
         }
         patrolTarget = points[0];
-        currentPoint = 0;
+       currentPoint = 0;
+        agent.destination = points[0].transform.position;
     }
 
     // Update is called once per frame
@@ -60,14 +64,14 @@ public class Kid : MonoBehaviour {
         //later add scare types
         scareMeter -= newScare;
         if (scareMeter <= 0 && isScared == false)
-        { isScared = true; scaredIndicator.active = true; patrolTarget = exit; }
+        { isScared = true; scaredIndicator.active = true; patrolTarget = exit; agent.destination = exit.transform.position;  kidtracker.GetComponent<KidTracker>().KidScaredAway(); }
     }
     public void Patrol()
     {
-        targetRotation = Quaternion.LookRotation(patrolTarget.transform.position - transform.position);
+       // targetRotation = Quaternion.LookRotation(patrolTarget.transform.position - transform.position);
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 6 * Time.deltaTime);
-        transform.position = Vector3.MoveTowards(transform.position, patrolTarget.transform.position, speed * Time.deltaTime);
+       // transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 6 * Time.deltaTime);
+       // transform.position = Vector3.MoveTowards(transform.position, patrolTarget.transform.position, speed * Time.deltaTime);
         if (Vector3.Distance(patrolTarget.transform.position, transform.position) < 5) {
             if (isScared == false) { GotoNextPoint(); } else { Destroy(this.gameObject); }
            
@@ -79,7 +83,7 @@ public class Kid : MonoBehaviour {
         { return; }
         currentPoint = (currentPoint + 1) % points.Length;
         patrolTarget = points[currentPoint];
-
+        agent.destination = points[currentPoint].transform.position;
     }
 
 }
