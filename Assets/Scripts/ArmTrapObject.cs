@@ -18,4 +18,6 @@ public class ArmTrapObject : MonoBehaviour {
         myTrapToArm.GetComponent<ProximityObject>().Armed();
        
     }
+    public void OnTriggerEnter(Collider col)
+    { if (col.gameObject.tag == "Hand" ) { if (col.gameObject.GetComponent<Hand>().spectral == true) { Interact(); } } }
 }

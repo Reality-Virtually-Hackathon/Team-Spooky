@@ -17,7 +17,6 @@ public class Door : MonoBehaviour {
 	}
 
     public void Interact() {
-		Debug.Log ("I'm a door"); 
         HingeJoint hinge = doorHinge.GetComponent<HingeJoint>();
         JointSpring hingeSpring = hinge.spring;
         if (open == true) { open = false;
@@ -29,4 +28,7 @@ public class Door : MonoBehaviour {
         scareObj.GetComponent<ScareObject>().lifetime = 6;
         scareObj.active = true;
     }
+    public void OnTriggerEnter(Collider col)
+    { if (col.gameObject.tag == "Hand") { if (col.gameObject.GetComponent<Hand>().spectral == true) { Interact(); } } }
+
 }
