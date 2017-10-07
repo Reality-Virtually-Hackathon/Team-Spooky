@@ -16,7 +16,7 @@ public class MovementController : MonoBehaviour {
 	void FixedUpdate() {
 		micLoudness = LevelMax (); 
 		if (micLoudness > 0.009) {
-			transform.Translate(cameraRig.transform.forward * (micLoudness * 100) * Time.deltaTime);
+			transform.Translate(cameraRig.transform.forward * (micLoudness * 10) * Time.deltaTime);
 		}
 	}
 		
