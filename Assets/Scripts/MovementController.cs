@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovementController : MonoBehaviour {
 	
 	public GameObject cameraRig; 
-	public float movementSpeed;
 	public static float micLoudness; 
 	private int sample = 128; 
 	private AudioClip clip; 
@@ -16,10 +15,8 @@ public class MovementController : MonoBehaviour {
 
 	void FixedUpdate() {
 		micLoudness = LevelMax (); 
-		Debug.Log (micLoudness); 
-		if (micLoudness > 0.001) {
-			Debug.Log (micLoudness); 
-			transform.Translate(cameraRig.transform.forward * Time.deltaTime);
+		if (micLoudness > 0.009) {
+			transform.Translate(cameraRig.transform.forward * (micLoudness * 100) * Time.deltaTime);
 		}
 	}
 		
