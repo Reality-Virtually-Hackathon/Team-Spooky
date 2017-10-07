@@ -93,6 +93,7 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRWaitCursor.cs" />
+     <Compile Include="Assets\Scripts\ArmTrapObject.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\InteractionController.cs" />
      <Compile Include="Assets\Scripts\Kid.cs" />
@@ -100,6 +101,7 @@
      <Compile Include="Assets\Scripts\MovementController.cs" />
      <Compile Include="Assets\Scripts\PhysicsObject.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\ProximityObject.cs" />
      <Compile Include="Assets\Scripts\ScareObject.cs" />
      <None Include="Assets\OVR\Resources\OVRMRUnlitTransparent.shader" />
      <None Include="Assets\OVR\Resources\OVRMRChromaKey.cginc" />
