@@ -22,5 +22,6 @@ public class PhysicsObject : MonoBehaviour {
         scareObj.GetComponent<ScareObject>().lifetime = 6;
         scareObj.active = true;
     }
-
+    public void OnTriggerEnter(Collider col)
+    { if (col.gameObject.tag == "Hand") { if (col.gameObject.GetComponent<Hand>().spectral == true) { Interact(); } } }
 }

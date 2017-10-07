@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class InteractionController: MonoBehaviour
 {
-
+    public GameObject leftHand;
+    public GameObject rightHand;
 	public void Interact() {
 		RaycastHit hit;
 
@@ -16,10 +17,18 @@ public class InteractionController: MonoBehaviour
 	}
 
 	public void Update () {
-		if (OVRInput.Get (OVRInput.RawButton.LIndexTrigger) || OVRInput.Get (OVRInput.RawButton.RIndexTrigger)) {
-			Debug.Log ("You're pressing a button!"); 
-			Interact (); 
-		}
-	}
+		if (OVRInput.Get (OVRInput.RawButton.LIndexTrigger)) {
+	
+           
+          
+        }
+        if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+        {
+           
+          
+        }
+    }
+
+    
 }
 
