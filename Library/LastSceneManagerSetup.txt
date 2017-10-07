@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/DanCurrent.unity
+=======
+- path: Assets/Scenes/Kathleen.unity
+>>>>>>> 0a79d989a8793528e6f1ccbaf8748f230f76f557
   isLoaded: 1
   isActive: 1
