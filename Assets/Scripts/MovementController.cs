@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class MovementController : MonoBehaviour {
 	
-	// Update is called once per frame
+	public GameObject cameraRig; 
+
+	private Rigidbody rb; 
+
+	void Start () {
+		rb = cameraRig.GetComponent<Rigidbody>(); 
+	}
+
 	void Update () {
-		
+		rb.AddRelativeForce(Vector3.forward * 50); 
+		Debug.Log(cameraRig.transform.position);
 	}
 }
