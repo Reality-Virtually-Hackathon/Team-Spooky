@@ -36,8 +36,13 @@ public class ProximityObject : MonoBehaviour {
         if (staticScare == false)
         {
             armed = false;
+<<<<<<< HEAD
             anim.Play(myAnimation);
 			AkSoundEngine.PostEvent (myScareSound, gameObject);
+=======
+            anim.Play("Pop");
+			AkSoundEngine.PostEvent ("Jack_Open", gameObject);
+>>>>>>> 037ece321dd729b057afc3d6223a342aa14e8428
         }
         else
         {
@@ -50,7 +55,11 @@ public class ProximityObject : MonoBehaviour {
     {
         countdown = totalCountdown;
         armed = true;
+<<<<<<< HEAD
 		AkSoundEngine.PostEvent (myArmSound, gameObject);
+=======
+		AkSoundEngine.PostEvent ("Jack_Crank", gameObject);
+>>>>>>> 037ece321dd729b057afc3d6223a342aa14e8428
         
     }
 }

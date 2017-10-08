@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hand : MonoBehaviour {
     public bool spectral;
     public bool physical;
+<<<<<<< HEAD
     public GameObject spectralIndicator;
     public GameObject physicalIndicator;
     public bool left;
@@ -48,5 +49,50 @@ public class Hand : MonoBehaviour {
             else { GetComponent<Collider>().isTrigger = true; physicalIndicator.active = false; }
 
         }
+=======
+    public GameObject spectralIndicator;
+    public GameObject physicalIndicator;
+    public bool left;
+    // Use this for initialization
+    void Start() {
+
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (left == true)
+        {
+            if (OVRInput.Get(OVRInput.RawButton.LIndexTrigger))
+            {
+                spectral = true;
+                spectralIndicator.active = true;
+                physicalIndicator.active = false;
+            }
+            else { spectral = false; spectralIndicator.active = true; }
+            if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+            {
+                GetComponent<Collider>().isTrigger = false; physicalIndicator.active = true;
+            }
+            else { GetComponent<Collider>().isTrigger = true; physicalIndicator.active = false; }
+        }
+
+
+        else
+        {
+            if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger))
+            {
+                spectral = true;
+                physicalIndicator.active = false;
+                spectralIndicator.active = true;
+            }
+
+            else { spectral = false; spectralIndicator.active = false; }
+
+            if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+            { GetComponent<Collider>().isTrigger = false; physicalIndicator.active = true; }
+            else { GetComponent<Collider>().isTrigger = true; physicalIndicator.active = false; }
+
+        }
+>>>>>>> 037ece321dd729b057afc3d6223a342aa14e8428
     }
 }
