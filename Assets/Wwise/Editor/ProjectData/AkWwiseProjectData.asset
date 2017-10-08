@@ -38,7 +38,15 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1328105034
       Guid: 60c1c35aa3803240ab9717ebd072b5a0
+<<<<<<< HEAD
       maxAttenuation: 100
+=======
+<<<<<<< HEAD
+      maxAttenuation: 100
+=======
+      maxAttenuation: 0
+>>>>>>> 037ece321dd729b057afc3d6223a342aa14e8428
+>>>>>>> bb4a869f58355f7d048ab4e8b04fece70b09b5f5
     - Name: Jack_Crank
       Path: Default Work Unit/Jack_Crank
       PathAndIcons:
@@ -48,7 +56,15 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1156535540
       Guid: 357882c33ed2ff4ab993adfd5852f7e8
+<<<<<<< HEAD
       maxAttenuation: 100
+=======
+<<<<<<< HEAD
+      maxAttenuation: 100
+=======
+      maxAttenuation: 0
+>>>>>>> 037ece321dd729b057afc3d6223a342aa14e8428
+>>>>>>> bb4a869f58355f7d048ab4e8b04fece70b09b5f5
     - Name: Jack_Open
       Path: Default Work Unit/Jack_Open
       PathAndIcons:
@@ -58,7 +74,15 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1478725141
       Guid: 2aeb5f2074bacd4ba543d67b933326a8
+<<<<<<< HEAD
       maxAttenuation: 100
+=======
+<<<<<<< HEAD
+      maxAttenuation: 100
+=======
+      maxAttenuation: 0
+>>>>>>> 037ece321dd729b057afc3d6223a342aa14e8428
+>>>>>>> bb4a869f58355f7d048ab4e8b04fece70b09b5f5
     - Name: Moving
       Path: Default Work Unit/Moving
       PathAndIcons:
@@ -219,6 +243,14 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GhostSimulator_Wwise
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  - /GhostSimulator_Wwise/Events
+  - /GhostSimulator_Wwise/Events/Default Work Unit
+>>>>>>> 037ece321dd729b057afc3d6223a342aa14e8428
+>>>>>>> bb4a869f58355f7d048ab4e8b04fece70b09b5f5
   - /GhostSimulator_Wwise/SoundBanks
   - /GhostSimulator_Wwise/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
