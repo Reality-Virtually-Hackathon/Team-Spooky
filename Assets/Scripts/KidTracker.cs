@@ -21,6 +21,13 @@ public class KidTracker : MonoBehaviour {
     {
         kidsRemaining--;
         kidCount.text = kidsRemaining.ToString();
+		if (kidsRemaining <= 4) {
+			MusicManager.MusicScared_Low ();
+		}
+
+		if (kidsRemaining <= 2) {
+			MusicManager.MusicScared_High ();
+		}
         if (kidsRemaining <= 0) { YouWin(); }
     }
     public void YouWin() { }

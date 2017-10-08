@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CANDLE = 2912468606U;
         static const AkUniqueID DOOR_INTERACT = 1328105034U;
         static const AkUniqueID JACK_CRANK = 1156535540U;
         static const AkUniqueID JACK_OPEN = 2816242155U;
@@ -20,13 +21,14 @@ namespace AK
         static const AkUniqueID NOTMOVING = 1033359058U;
         static const AkUniqueID NOTSCARED = 2332804972U;
         static const AkUniqueID PLAYMX = 935210936U;
-        static const AkUniqueID SCARED = 820940617U;
+        static const AkUniqueID SCARED_LOW = 3366558234U;
         static const AkUniqueID STOPAL = 613886750U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID SCARMETER = 463556505U;
+        static const AkUniqueID SFX_DUCK_MX = 3640029270U;
     } // namespace GAME_PARAMETERS
 
     namespace BANKS

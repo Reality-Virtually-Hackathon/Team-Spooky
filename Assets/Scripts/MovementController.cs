@@ -15,7 +15,8 @@ public class MovementController : MonoBehaviour {
 
 	void FixedUpdate() {
 		micLoudness = LevelMax (); 
-		if (micLoudness > 0.009) {
+		if (micLoudness > 0.009 || Input.GetKey("joystick button 0"))
+        {
 			transform.Translate (cameraRig.transform.forward * (micLoudness * 125) * Time.deltaTime);
 			MusicManager.MovingMusic ();
 		} else {

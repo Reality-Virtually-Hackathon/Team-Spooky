@@ -14,13 +14,7 @@ public class MusicManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown ("s")) {
-			MusicScared ();
-		}
-
-		if (Input.GetKeyDown ("a")) {
-			MusicNotScared ();
-		}
+		
 	}
 
 
@@ -28,8 +22,12 @@ public class MusicManager : MonoBehaviour {
 		AkSoundEngine.PostEvent("PlayMX", wg);
 	}
 
-	public static void MusicScared(){
-		AkSoundEngine.PostEvent ("Scared", wg);
+	public static void MusicScared_Low(){
+		AkSoundEngine.PostEvent ("Scared_Low", wg);
+	}
+
+	public static void MusicScared_High(){
+		AkSoundEngine.PostEvent ("Scared_High", wg);
 	}
 
 	public static void MusicNotScared(){

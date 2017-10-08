@@ -23,8 +23,8 @@ public class Hand : MonoBehaviour {
                 spectralIndicator.active = true;
                 physicalIndicator.active = false;
             }
-            else { spectral = false; spectralIndicator.active = true; }
-            if (OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+            else { spectral = false; spectralIndicator.active = false; }
+            if (OVRInput.Get(OVRInput.RawButton.LHandTrigger))
             {
                 GetComponent<Collider>().isTrigger = false; physicalIndicator.active = true;
             }

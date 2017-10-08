@@ -43,11 +43,6 @@ public class Kid : MonoBehaviour {
         if (isScared == false) { Patrol(); }
         else { Patrol(); }
 
-		if (isScared) {
-			MusicManager.MusicScared();
-		} else if (!isScared) {
-			MusicManager.MusicNotScared ();
-		}
     }
 
 

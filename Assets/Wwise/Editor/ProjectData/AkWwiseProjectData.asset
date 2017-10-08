@@ -16,9 +16,19 @@ MonoBehaviour:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{6686C16E-3300-468A-BFA5-DDEFBCCBE1C5}'
-    m_lastTimePsrt1: 372001536
-    m_lastTimePart2: -1999303089
+    m_lastTimePsrt1: 1628604032
+    m_lastTimePart2: -1999303040
     List:
+    - Name: Candle
+      Path: Default Work Unit/Candle
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Candle
+        ObjectType: 3
+      ID: -1382498690
+      Guid: 35d007c6aff8ce4abf205649d7c81c0c
+      maxAttenuation: 0
     - Name: Door_Interact
       Path: Default Work Unit/Door_Interact
       PathAndIcons:
@@ -28,7 +38,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1328105034
       Guid: 60c1c35aa3803240ab9717ebd072b5a0
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: Jack_Crank
       Path: Default Work Unit/Jack_Crank
       PathAndIcons:
@@ -38,7 +48,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: 1156535540
       Guid: 357882c33ed2ff4ab993adfd5852f7e8
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: Jack_Open
       Path: Default Work Unit/Jack_Open
       PathAndIcons:
@@ -48,7 +58,7 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1478725141
       Guid: 2aeb5f2074bacd4ba543d67b933326a8
-      maxAttenuation: 0
+      maxAttenuation: 100
     - Name: Moving
       Path: Default Work Unit/Moving
       PathAndIcons:
@@ -89,14 +99,24 @@ MonoBehaviour:
       ID: 935210936
       Guid: 1b1cd0d1c956da428eadf6bf71c66bff
       maxAttenuation: 0
-    - Name: Scared
-      Path: Default Work Unit/Scared
+    - Name: Scared_High
+      Path: Default Work Unit/Scared_High
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Scared
+      - ElementName: Scared_High
         ObjectType: 3
-      ID: 820940617
+      ID: -1624994960
+      Guid: 44890fadde5ad64fb85d1a5489c9bb13
+      maxAttenuation: 0
+    - Name: Scared_Low
+      Path: Default Work Unit/Scared_Low
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Scared_Low
+        ObjectType: 3
+      ID: -928409062
       Guid: f330a140bdd5474098ee3a51a716b40a
       maxAttenuation: 0
     - Name: ScaredKid
@@ -123,8 +143,8 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{EA25C77E-9611-4159-9A2A-AE5ED0A69B04}'
-    m_lastTimePsrt1: 168534912
-    m_lastTimePart2: -1999303195
+    m_lastTimePsrt1: 418734848
+    m_lastTimePart2: -1999303036
     List: []
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
@@ -144,8 +164,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{62003641-82A7-4496-AF7D-3A7A9294248F}'
-    m_lastTimePsrt1: -1383161984
-    m_lastTimePart2: -1999303095
+    m_lastTimePsrt1: 1628604032
+    m_lastTimePart2: -1999303040
     List:
     - Name: Main
       Path: Default Work Unit/Main
@@ -169,8 +189,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{4FF9316E-DC56-4157-8A0B-6E980CB896A4}'
-    m_lastTimePsrt1: -1671530496
-    m_lastTimePart2: -1999303198
+    m_lastTimePsrt1: 23702144
+    m_lastTimePart2: -1999303037
     List:
     - Name: scarMeter
       Path: Default Work Unit/scarMeter
@@ -181,6 +201,15 @@ MonoBehaviour:
         ObjectType: 13
       ID: 463556505
       Guid: 74b050a674ba634eb99d72a068949b7f
+    - Name: SFX_duck_MX
+      Path: Default Work Unit/SFX_duck_MX
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SFX_duck_MX
+        ObjectType: 13
+      ID: -654938026
+      Guid: 85ff87e1835d104f9f7214f63e209000
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -190,8 +219,6 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /GhostSimulator_Wwise
-  - /GhostSimulator_Wwise/Events
-  - /GhostSimulator_Wwise/Events/Default Work Unit
   - /GhostSimulator_Wwise/SoundBanks
   - /GhostSimulator_Wwise/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0

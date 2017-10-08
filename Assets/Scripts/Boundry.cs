@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boundry : MonoBehaviour {
     public GameObject oppositeWall;
+    public GameObject center;
+    public bool finalBoundry;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,4 +19,9 @@ public class Boundry : MonoBehaviour {
     { if (col.gameObject.tag == "Player") {
             Debug.Log("border");
             col.transform.position = col.transform.position - (transform.position - oppositeWall.transform.position); } }
+
+    public void OnTriggerExit(Collider other)
+    {
+        if (finalBoundry == true && other.gameObject.tag == "Player") { other.transform.position = center.transform.position; }
+    }
 }
