@@ -29,8 +29,13 @@ public class Player : MonoBehaviour {
     public void Update()
     {
         if (Input.GetMouseButtonDown(0)) { Interact(); }
-        if (Input.GetKey(KeyCode.Space) )
-        { player.transform.position = Vector3.MoveTowards(player.transform.position, forwardObject.transform.position, 4 * Time.deltaTime); }
+		if (Input.GetKey (KeyCode.Space)) { 
+			player.transform.position = Vector3.MoveTowards (player.transform.position, forwardObject.transform.position, 4 * Time.deltaTime);
+			MusicManager.MovingMusic ();
+
+		} else {
+			MusicManager.NotMovingMusic ();
+		}
 
             if (Input.GetKey(KeyCode.Tab) || lockCursor == false)
         {

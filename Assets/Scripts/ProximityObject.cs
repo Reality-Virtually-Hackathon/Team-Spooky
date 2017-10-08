@@ -34,6 +34,7 @@ public class ProximityObject : MonoBehaviour {
         {
             armed = false;
             anim.Play("Pop");
+			AkSoundEngine.PostEvent ("Jack_Open", gameObject);
         }
         else
         {
@@ -46,6 +47,7 @@ public class ProximityObject : MonoBehaviour {
     {
         countdown = totalCountdown;
         armed = true;
+		AkSoundEngine.PostEvent ("Jack_Crank", gameObject);
         
     }
 }

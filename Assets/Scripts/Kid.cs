@@ -42,6 +42,12 @@ public class Kid : MonoBehaviour {
 
         if (isScared == false) { Patrol(); }
         else { Patrol(); }
+
+		if (isScared) {
+			MusicManager.MusicScared();
+		} else if (!isScared) {
+			MusicManager.MusicNotScared ();
+		}
     }
 
 
@@ -64,7 +70,7 @@ public class Kid : MonoBehaviour {
         //later add scare types
         scareMeter -= newScare;
         if (scareMeter <= 0 && isScared == false)
-        { isScared = true; scaredIndicator.active = true; patrolTarget = exit; agent.destination = exit.transform.position;  kidtracker.GetComponent<KidTracker>().KidScaredAway(); }
+		{ isScared = true; scaredIndicator.active = true; patrolTarget = exit; agent.destination = exit.transform.position;  kidtracker.GetComponent<KidTracker>().KidScaredAway(); AkSoundEngine.PostEvent ("ScaredKid", gameObject); }
     }
     public void Patrol()
     {
