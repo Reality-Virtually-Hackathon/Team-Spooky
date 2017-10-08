@@ -9,8 +9,11 @@ public class ProximityObject : MonoBehaviour {
     public bool staticScare;
     public GameObject scareObj;
     private Animator anim;
-	// Use this for initialization
-	void Start () {
+    public string myAnimation;
+    public string myScareSound;
+    public string myArmSound;
+    // Use this for initialization
+    void Start () {
         if (staticScare == false)
         {
             anim = GetComponent<Animator>();
@@ -33,7 +36,8 @@ public class ProximityObject : MonoBehaviour {
         if (staticScare == false)
         {
             armed = false;
-            anim.Play("Pop");
+            anim.Play(myAnimation);
+			AkSoundEngine.PostEvent (myScareSound, gameObject);
         }
         else
         {
@@ -46,6 +50,7 @@ public class ProximityObject : MonoBehaviour {
     {
         countdown = totalCountdown;
         armed = true;
+		AkSoundEngine.PostEvent (myArmSound, gameObject);
         
     }
 }

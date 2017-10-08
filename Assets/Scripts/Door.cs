@@ -17,6 +17,7 @@ public class Door : MonoBehaviour {
 	}
 
     public void Interact() {
+		
         HingeJoint hinge = doorHinge.GetComponent<HingeJoint>();
         JointSpring hingeSpring = hinge.spring;
         if (open == true) { open = false;

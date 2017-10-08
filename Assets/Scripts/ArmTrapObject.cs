@@ -19,5 +19,5 @@ public class ArmTrapObject : MonoBehaviour {
        
     }
     public void OnTriggerEnter(Collider col)
-    { if (col.gameObject.tag == "Hand" ) { if (col.gameObject.GetComponent<Hand>().spectral == true) { Interact(); } } }
+	{ if (col.gameObject.tag == "Hand" ) { if (col.gameObject.GetComponent<Hand>().spectral == true) { Interact(); } } }
 }
