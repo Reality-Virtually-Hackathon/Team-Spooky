@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/DanCurrent.unity
+- path: Assets/Scenes/DanCurrent 1.unity
   isLoaded: 1
   isActive: 1

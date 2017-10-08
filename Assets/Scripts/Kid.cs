@@ -18,9 +18,11 @@ public class Kid : MonoBehaviour {
     public GameObject scaredIndicator;
     private Rigidbody rb;
     private UnityEngine.AI.NavMeshAgent agent;
+    private Animator anim;
     void Start()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         foreach (Transform child in patrolPointsParent.transform)
         {
@@ -54,7 +56,7 @@ public class Kid : MonoBehaviour {
 
             if (Physics.Raycast(eyes.transform.position, (currentScaryObject.transform.position - eyes.transform.position), out hit, 12.0f) && hit.transform.gameObject == currentScaryObject)
             {
-
+                lastScareObject = currentScaryObject;
                 ScareChange(scareObjectValue);
             }
         }
@@ -64,8 +66,9 @@ public class Kid : MonoBehaviour {
     {
         //later add scare types
         scareMeter -= newScare;
+        anim.Play("ScaredJump");
         if (scareMeter <= 0 && isScared == false)
-		{ isScared = true; scaredIndicator.active = true; patrolTarget = exit; agent.destination = exit.transform.position;  kidtracker.GetComponent<KidTracker>().KidScaredAway(); AkSoundEngine.PostEvent ("ScaredKid", gameObject); }
+		{ isScared = true; anim.SetBool("Scared",true); scaredIndicator.active = true; patrolTarget = exit; agent.destination = exit.transform.position;  kidtracker.GetComponent<KidTracker>().KidScaredAway(); AkSoundEngine.PostEvent ("ScaredKid", gameObject); }
     }
     public void Patrol()
     {
@@ -86,5 +89,6 @@ public class Kid : MonoBehaviour {
         patrolTarget = points[currentPoint];
         agent.destination = points[currentPoint].transform.position;
     }
-
+    public void PauseMovement() { agent.speed = 0; }
+    public void StartMovement() { agent.speed = 5; }
 }
